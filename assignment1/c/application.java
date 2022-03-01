@@ -1,6 +1,9 @@
-class c{
+package c;
+
+import b.b;
+public class application{
 public static void main(String[] args){
-	B obj = new B();
-	B.run();
+	b obj = new b();
+	obj.run();
 }	
 }
