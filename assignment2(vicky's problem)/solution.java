@@ -18,7 +18,19 @@ public int calcJumpTime(int distance){
 		}
 		//if distance passes first round;
 		if(distance>15){
-			return 0;
+			int timeElapsed = 0;
+			timeElapsed += (distance/9)*6;
+			int partialRounds = distance%9;
+			if (partialRounds>0 && partialRounds<6) {
+				timeElapsed += 3;
+			}
+			if(partialRounds>=6 && partialRounds<=8){
+				timeElapsed++;
+			}
+			if (partialRounds>8 && partialRounds<9) {
+				timeElapsed += 2;
+			}
+			return timeElapsed-3;
 		}
 
 		return 0;
