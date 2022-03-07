@@ -1,4 +1,5 @@
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class main{
@@ -8,6 +9,7 @@ public class main{
         String input = scanner.nextLine();
 
         char[] inp =  input.toCharArray();
+        inp = Arrays.sort(inp);
         int[] inpArray = new int[inp.length];
 
         for(int i = 0; i<inp.length; i++){
