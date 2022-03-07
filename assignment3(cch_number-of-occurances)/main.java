@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class main{
@@ -7,9 +8,15 @@ public class main{
         String input = scanner.nextLine();
 
         char[] inp =  input.toCharArray();
-        int[] 
+        int[] inpArray = new int[inp.length];
+
         for(int i = 0; i<inp.length; i++){
-            int x = inp[i];
+            inpArray[i] = inp[i];
+            
+            if(inpArray[i]>90){
+                inpArray[i] -= 32;
+            }
+            int x = inpArray[i];
             System.out.println(x);    
         }
     }
